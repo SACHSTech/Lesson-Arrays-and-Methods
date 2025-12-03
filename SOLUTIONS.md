@@ -29,7 +29,9 @@ public int sumArray(int[] arr) {
 
 ## Problem 2 — Add a Bonus to Every Mark
 
-Because arrays are passed by reference, modifying `marks[]` inside the method changes it in `run()`.
+Because arrays are passed by reference, modifying `marks[]` inside the method changes it in `run()`. 
+
+In this example, we will consider it an acceptable design decision to modify the original `marks[]` array — presumably, we are no longer interested in the original values in `marks[]`.
 
 ```java
 public void run() {
@@ -96,7 +98,9 @@ public int countAbove(int[] arr, int limit) {
 
 ## Problem 4 — Copy Array (Method Returns a New Array)
 
-We manually copy the elements by index to ensure understanding.
+Before we do anything useful, we'll just try to write a method that simply returns a new copy of an array passed through a parameter.
+
+The `original[]` array is untouched. Our method creates a copy — a new array — as a return result and we store it in `copy[]`.
 
 ```java
 public void run() {
@@ -130,10 +134,12 @@ public int[] copyArray(int[] arr) {
 }
 ```
 
+This is different than working with an array as a reference because we have preserved the unmodified original array.
+
 
 ## Problem 5 — Extract the Middle Pair
 
-We compute middle indices using `length/2`.
+For best practice, we compute middle indices using `.length / 2` to avoid hard-coding or using *magic numbers*.
 
 ```java
 public void run() {
@@ -161,7 +167,7 @@ public int[] middleTwo(int[] nums) {
 
 ## Problem 6 — Multiply All Elements
 
-Array modification happens directly in the original array.
+Here, the design calls for a method that modifies the original array. We'll write a method that uses the array by reference.
 
 ```java
 public void run() {
@@ -193,7 +199,7 @@ public void multiplyAll(int[] arr, int factor) {
 
 ## Problem 7 — Index of Target (Search Method)
 
-A simple linear search using indices.
+A simple linear search using indices. 
 
 ```java
 public void run() {
@@ -222,7 +228,7 @@ public int findIndex(int[] arr, int target) {
 
 ## Problem 8 — Reverse Copy
 
-The new array is filled from back to front.
+The design specifically calls for a new array, so we have our method make a copy and return it. Unlike Problem 4 (above) though, the new array is filled from back to front. 
 
 ```java
 public void run() {
@@ -258,7 +264,7 @@ public int[] reverseCopy(int[] arr) {
 
 ## Problem 9 — Replace Negatives
 
-Modify only negative elements.
+Modify only negative elements. In this case, we make the design decision to allow overwriting of the original array's values.
 
 ```java
 public void run() {
@@ -286,7 +292,7 @@ public void replaceNegatives(int[] arr) {
 
 ## Problem 10 — Pairwise Sums
 
-Each result element is the sum of two neighbours.
+Each result element is the sum of two neighbours. The algorithm necessitates a new array that is one element smaller than the original.
 
 ```java
 public void run() {
