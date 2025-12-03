@@ -88,6 +88,9 @@ Because both variables refer to the same array, updating `myArray[0]` updates `i
 
 This technique is heavily used when you want helper methods that “apply a rule” to an entire dataset.
 
+### Behaviour of Arrays vs Primitives as Parameters
+For a clear comparison of this behaviour, see [this note](https://davecheng-tech.github.io/Class-Notes-and-Addenda/ICS3U/methods_primitives_vs_arrays) for a side-by-side illustration of what happens to an `int` vs `int[]` when used in a method parameter.
+
 
 ## 3. Returning Arrays From Methods
 
