@@ -1,4 +1,4 @@
-# Methods and Arrays
+# Arrays and Methods
 
 This lesson explains how arrays behave when you pass them into methods, modify them inside methods, and return them from methods. Understanding this behaviour is essential for writing clean, reusable, and well‑structured programs.
 
@@ -154,3 +154,292 @@ In summary, remember these quirks about working with arrays and methods:
 - **Arrays as parameters**: Methods receive references, not copies.
 - **Modifying arrays inside methods**: Changes inside the method affect the original array.
 - **Returning arrays**: Methods can create and return new arrays
+
+<br>
+
+# Practice Problems — Arrays and Methods
+
+Each problem reinforces the ideas from the above lesson: passing arrays to methods, modifying arrays inside methods, and returning arrays from methods.  
+
+Starter code templates should be placed in the `src/` folder of the repo.
+
+
+## Problem 1 — Sum Using a Method
+
+Write a method `sumArray(int[] arr)` that returns the sum of all elements in the array.
+
+In your `run()` method:
+
+- Create an `int[]` with 5 values  
+- Call `sumArray(arr)`  
+- Print the returned sum
+
+### Example Input
+```
+[3, 9, 2, 7, 4]
+```
+
+### Example Output
+```
+Sum = 25
+```
+
+<br>
+
+## Problem 2 — Add a Bonus to Every Mark
+
+Write a method:
+
+```java
+public void addBonus(int[] marks, int bonus)
+```
+
+that increases **every** mark in the array by the given bonus amount.
+
+In your `run()` method:
+
+- Create an array of 5 marks  
+- Print the original marks on one line  
+- Call `addBonus(marks, 2)` to add `+2` to all marks  
+- Print the updated marks on one line
+
+### Example Output
+```
+Original: 10 7 8 9 6
+After bonus: 12 9 10 11 8
+```
+
+<br>
+
+## Problem 3 — Count Above Threshold
+
+Write a method:
+
+```java
+public int countAbove(int[] arr, int limit)
+```
+
+that returns how many values in the array are **greater than** `limit`.
+
+In your `run()` method:
+
+- Ask the user for 5 integers and store them in an array  
+- Ask for a `limit` value  
+- Call `countAbove(arr, limit)` and print the result
+
+### Example Input
+```
+Values: 8 12 3 14 6
+Limit: 10
+```
+
+### Example Output
+```
+Count above 10: 2
+```
+
+<br>
+
+## Problem 4 — Copy Array (Method Returns New Array)
+
+Write a method:
+
+```java
+public int[] copyArray(int[] arr)
+```
+
+that returns a **new** array containing the same values as `arr`.
+
+In your `run()` method:
+
+- Create an `int[]` with a few values  
+- Call `copyArray(arr)` and store the result  
+- Print both arrays on separate lines
+
+### Example Input
+```
+[4, 1, 9]
+```
+
+### Example Output
+```
+Original: 4 1 9
+Copy:     4 1 9
+```
+
+<br>
+
+## Problem 5 — Extract the Middle Pair
+
+Write a method:
+
+```java
+public int[] middleTwo(int[] nums)
+```
+
+that returns a new array of size 2 containing the **two middle elements** of an **even-length** input array.
+
+In your `run()` method:
+
+- Create an even-length `int[]`  
+- Call `middleTwo(nums)`  
+- Print the two returned values
+
+### Example Input
+```
+Input array: [4, 7, 9, 12, 15, 20]
+```
+
+### Example Output
+```
+Middle two result: 9 12
+```
+
+<br>
+
+## Problem 6 — Multiply All Elements
+
+Write a method:
+
+```java
+public void multiplyAll(int[] arr, int factor)
+```
+
+that **modifies** the original array by multiplying each element by `factor`.
+
+In your `run()` method:
+
+- Create a small `int[]`  
+- Print it  
+- Call `multiplyAll(arr, factor)`  
+- Print the array again to show the change
+
+### Example Input
+```
+Array: 2 4 6
+Factor: 3
+```
+
+### Example Output
+```
+Before: 2 4 6
+After:  6 12 18
+```
+
+<br>
+
+## Problem 7 — Index of Target (Method)
+
+Write a method:
+
+```java
+public int findIndex(int[] arr, int target)
+```
+
+that returns the index of `target`, or `-1` if it does not exist in the array.
+
+In your `run()` method:
+
+- Create an `int[]` with some values  
+- Ask the user for a target number  
+- Call `findIndex(arr, target)` and print the result
+
+### Example Input
+```
+Array:  [5, 8, 2, 8, 1]
+Target: 8
+```
+
+### Example Output
+```
+Found at index: 1
+```
+
+(You may choose to return the **first** index where it appears.)
+
+<br>>
+
+## Problem 8 — Reverse Copy
+
+Write a method:
+
+```java
+public int[] reverseCopy(int[] arr)
+```
+
+that returns a **new array** containing the values of `arr` in reverse order.
+
+In your `run()` method:
+
+- Create an `int[]`  
+- Call `reverseCopy(arr)`  
+- Print both the original and reversed arrays
+
+### Example Input
+```
+[3, 7, 1, 9]
+```
+
+### Example Output
+```
+Original: 3 7 1 9
+Reversed: 9 1 7 3
+```
+
+<br>
+
+## Problem 9 — Replace Negatives
+
+Write a method:
+
+```java
+public void replaceNegatives(int[] arr)
+```
+
+that modifies the array by turning all **negative numbers** into `0`.
+
+In your `run()` method:
+
+- Create an `int[]` that includes negative and positive values  
+- Print it  
+- Call `replaceNegatives(arr)`  
+- Print the updated array
+
+### Example Input
+```
+[-3, 4, -1, 7]
+```
+
+### Example Output
+```
+Updated: 0 4 0 7
+```
+
+<br>
+
+## Problem 10 — Pairwise Sums
+
+Write a method:
+
+```java
+public int[] pairwiseSums(int[] arr)
+```
+
+that returns a **new array** containing the sums of each pair of neighbours.  
+The new array will have length `arr.length - 1`.
+
+In your `run()` method:
+
+- Create an `int[]`  
+- Call `pairwiseSums(arr)`  
+- Print the result
+
+### Example Input
+```
+[4, 6, 2, 5]
+```
+
+### Example Output
+```
+Pairwise sums: 10 8 7
+```
