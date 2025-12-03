@@ -1,4 +1,4 @@
-# Methods and Arrays: Annotated Solutions (With Inline Comments)
+# Arrays and Methods: Annotated Solutions
 
 Each solution includes explanations to help understand the flow and purpose of each step.
 
